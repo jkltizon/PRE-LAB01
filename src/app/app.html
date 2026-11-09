@@ -1,0 +1,142 @@
+
+<main class="resume">
+
+  <!-- HEADER -->
+  <header class="intro">
+
+    <div class="header-accent"></div>
+
+    <p class="subtitle">PROFESSIONAL RESUME</p>
+
+    <h1>{{ fullName }}</h1>
+
+    <div class="contact-info">
+      <span>📍 {{ location }}</span>
+      <span>📞 {{ phone }}</span>
+      <a [href]="'mailto:' + email">✉ {{ email }}</a>
+    </div>
+
+  </header>
+
+  <!-- PERSONAL PROFILE -->
+  <section class="resume-section">
+
+    <h2>
+      <span class="section-number">01</span>
+      Personal Profile
+    </h2>
+
+    <p class="profile-text">
+      {{ profile }}
+    </p>
+
+  </section>
+
+  <!-- PROFILE OVERVIEW -->
+  <section class="resume-section profile-section">
+
+    <h2>
+      <span class="section-number">02</span>
+      Profile Overview
+    </h2>
+
+    <div class="profile-grid">
+
+      <div class="profile-item">
+        <span class="profile-icon">👤</span>
+        <div>
+          <h3>Full Name</h3>
+          <p>{{ fullName }}</p>
+        </div>
+      </div>
+
+      <div class="profile-item">
+        <span class="profile-icon">📍</span>
+        <div>
+          <h3>Location</h3>
+          <p>{{ location }}</p>
+        </div>
+      </div>
+
+      <div class="profile-item">
+        <span class="profile-icon">📞</span>
+        <div>
+          <h3>Contact Number</h3>
+          <p>{{ phone }}</p>
+        </div>
+      </div>
+
+      <div class="profile-item">
+        <span class="profile-icon">✉️</span>
+        <div>
+          <h3>Email Address</h3>
+          <p>{{ email }}</p>
+        </div>
+      </div>
+
+      <div class="profile-item">
+        <span class="profile-icon">💻</span>
+        <div>
+          <h3>Field of Interest</h3>
+          <p>Web Development</p>
+        </div>
+      </div>
+
+      <div class="profile-item">
+        <span class="profile-icon">🚀</span>
+        <div>
+          <h3>Career Goal</h3>
+          <p>To grow and develop professional skills in technology.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- KEY SKILLS -->
+  <section class="resume-section">
+
+    <h2>
+      <span class="section-number">03</span>
+      Key Skills
+    </h2>
+
+    <ul class="skills-list">
+
+      @for (skill of skills; track skill) {
+        <li>
+          <span class="skill-icon">✦</span>
+          {{ skill }}
+        </li>
+      }
+
+    </ul>
+
+  </section>
+
+  <!-- ANGULAR INTERACTION -->
+  <section class="resume-section interaction">
+
+    <h2>
+      <span class="section-number">04</span>
+      Angular Interaction
+    </h2>
+
+    <p>{{ message }}</p>
+
+    <button (click)="showMessage()">
+      Click Me
+      <span>→</span>
+    </button>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="resume-footer">
+
+    <p>© {{ fullName }} | Professional Resume</p>
+
+  </footer>
+
+</main>
